@@ -1,0 +1,373 @@
+<section id="out-of-thought-section" class="out-of-thought-section">
+
+</section>
+
+<section id="footer" class="footer">
+    <div class="footer-content">
+      <div class="footer-title-box">
+        <h1 class="footertitle">You're next.</h1>
+        <span class="footersubtitle">So what are you waiting for?</span>
+        <h2 class="footertitle">Let's do this.</h2>
+      </div>
+      <div class="contact-us-wrapper">
+        <div *ngIf="!isMessageWritten">
+          <span [ngStyle]="isMessageWritten ? {'opacity': '0.4'} : null">First of all, what do you need?</span>
+          <textarea type="text" placeholder="Describe your project briefly"
+                    [ngStyle]="isMessageWritten ? {'opacity': '0.4'} : {'opacity': '0.9'}" [(ngModel)]="message"
+                    [disabled]="isMessageWritten" (keyup)="replaceSpaces('message')"></textarea>
+          <div class="next-wrapper" *ngIf="message && !isMessageWritten"
+               (click)="nextField('message')">
+            <span>Next</span>
+            <img src="assets/icons/arrow%20right@2x.png" alt="">
+          </div>
+        </div>
+        <div class="name-box" *ngIf="isMessageWritten && !isNameWritten">
+          <span [ngStyle]="isNameWritten ? {'opacity': '0.4'} : null">Oh shoot! We didn’t get your name.</span>
+          <input type="text" placeholder="Please introduce yourself"
+                 [ngStyle]="isNameWritten ? {'opacity': '0.4'} : {'opacity': '0.9'}" [(ngModel)]="name"
+                 [disabled]="isNameWritten" (keyup)="replaceSpaces('name')">
+          <div class="next-wrapper" *ngIf="name && name.length >= 3 && !isNameWritten" (click)="nextField('name')">
+            <span>Next</span>
+            <img src="assets/icons/arrow%20right@2x.png" alt="">
+          </div>
+        </div>
+        <div class="email-box" *ngIf="isNameWritten">
+          <span>It’s nice to meet you. Now, how should we reach you?</span>
+          <input type="text" placeholder="Enter your email address" [(ngModel)]="email" (keyup)="replaceSpaces('email')">
+          <div class="loader-submit-wrapper">
+            <div id="loader"></div>
+            <div class="next-wrapper"
+                 *ngIf="email && email.match('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$') && !isLoading"
+                 (click)="sendForm()">
+              <span>Submit</span>
+              <img src="ssets/icons/arrow%20right@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-social-lists">
+        <ul class="contacts-list">
+          <li>
+            <a href="mailto:hello@binary.vision">
+              <i class="fas fa-at"></i>
+              <span>hello@binary.vision</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+604-359-7187">
+              <i class="fas fa-phone"></i>
+              <span>+604-359-7187</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyrights-wrapper">
+      <span>&copy; 2018 Binary Vision. All rights reserved.</span>
+    </div>
+  </section>
+
+<header id="header">
+  <div id="logo-nav-box" class="logo-nav-box">
+    <a (click)="routeTo('home')">
+        <img id="logo-image" src="assets/Services/Group 4.png" class="logo" alt="">
+    </a>
+    <div id="menu-btn-wrapper" class="menu-btn-wrapper">
+        <img id="menu-btn" src="assets/Services/menu.png" class="menu-btn" alt="" (click)="openMenu()">
+    </div>
+    <div id="menu" class="menu-wrapper">
+        <i class="fas fa-times"(click)="openMenu()"></i>
+
+        <div class="case-studies-content">
+            <span class="menu-title">Case studies</span>
+            <ul>
+                <li>
+                    <a (click)="routeTo('beteaze')">BetEaze</a>
+                </li>
+                <li>
+                    <a (click)="routeTo('arvin')">Arvin</a>
+                </li>
+                <li>
+                    <a (click)="routeTo('koffee')">lungo Social</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contact-content">
+            <span class="menu-title">Contact</span>
+            <ul>
+                <li>
+                    <a href="mailto:hello@binary.vision">
+                        <i class="fas fa-at"></i>
+                        <span>hello@binary.vision</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+604-359-7187">
+                        <i class="fas fa-phone"></i>
+                        <span>+604-359-7187</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="social-list">
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<img src="assets/Services/Group 9.svg" alt="" id="main-header" class="main-header">
+<div class="main-title-box">
+    <h1 id="header-title" class="headertitle">Your ideas,</h1>
+    <span id="header-subtitle" class="headersubtitle">our reality.</span>
+</div>
+<div class="scroll-box" (click)="scrollTo('header')">
+    <span>Sneak Peeks</span>
+    <img src="assets/Services/arrow@2x.png" alt="">
+</div>
+</header>
+
+
+<main>
+
+</main>
+
+<!-- <div style="margin-bottom: 100vh"></div> -->
+<div id="case-studies-section binaryvision" class="binaryvision-content" style="position: absolute;">
+    <h3 id="binaryvision" class="binaryvision">
+        At Binary Vision &#8212;
+      </h3>
+      <p class="content" id="content">
+        digital innovation is at the core of what we do.  Creating relatable and
+        unforgettable experiences, services, and products is our mission. We aren't afraid 
+        of putting in long hours to deliver unique work, and cultivate experiences form the 
+        fine details. We are innovative thinkers and jump into each project brain-first. We 
+        focus on the development of apps, websites, and other digital products with an 
+        emphasis on cutting-edge user-focused experiences by telling stories through 
+        exquisite design.
+        <br>
+      </p>
+</div>
+<section id="case-studies-section" class="case-studies-section">
+<div id="binaryvision-development" class="case-studies binaryvision-development">
+  <div class="all">
+      <h2 class="development-brand" id="development-brand">
+          &#8212; BINARY VISION DEVELOPMENT&trade;
+      </h2>
+      <span class="development-brand-span" id="development-brand-span">
+        Changing the game.
+      </span>
+      <div class="background1" id="background1">
+          <p class="development-brand-content" id="development-brand-content">
+              Choosing the right technology is vital for 
+              long term success. We prevent patchwork 
+              products and unnecessary reinvestments by 
+              always meeting the latest standards and
+              developments for your website, platform, or app. 
+              We understand the challenges clients face
+              when working on transformational
+              industry projects and we provide practical,
+              pragmatic, and powerful assistance to
+              develop world changing technologies to 
+              tackle even the smallest of challenges.
+            </p>
+      </div>
+      <div id="development-services" class="development-services" >
+          <h4>
+              Services
+            </h4>
+            <ul style="list-style-type:none">
+                <li>Website Development</li>
+                <li>Mobile App Development</li>
+                <li>Web Security & Infrastructure</li>
+                <li>Blockchain</li>
+                <li>Artificial Intelligence</li>
+                <li>Virtual Reality</li>
+                <li>Augmented Reality</li>
+              </ul> 
+      </div>
+        <div class="binaryvision-development-pic" id="binaryvision-development-pic">
+          <img id="binaryvision-development-pic1" src="assets/Services/macbook@2x.png" alt="">
+        </div>
+        <!-- <div class="parallax" data-z-index="2" data-parallax="scroll" data-image-src="assets/Services/macbook@2x.png">
+        </div> -->
+      </div>
+</div>
+<div id="binaryvision-uiux" class="case-studie binaryvision-ui/ux">
+  <h2 class="ui-brand" id="ui-brand">
+      BINARY VISION UX/UI&trade; &#8212;
+  </h2>
+  <span class="ui-brand-span" id="ui-brand-span">
+        Thinking made visual.
+  </span>
+  <div class="background2" id="background2">
+      <p class="ui-brand-content" id="ui-brand-content">
+          We always enjoy a good challenge. 
+          Designing and developing digital solutions 
+          for your organization is playtime to us. We 
+          create websites, platforms, apps, and 
+          everything in between. We shape design to 
+          take technology to a whole new level. Our 
+          products are made for usability, speed, and 
+          scalability with user experience and 
+          interface design is at the core of what we 
+          do. It's a strategic approach that enables us 
+          to build with reason. Every project we 
+          design starts with the user.
+        </p>
+  </div>
+<div class="ui-services" id="ui-services">
+    <h4>
+        Services
+      </h4>
+      <ul style="list-style-type:none">
+          <li>UX Strategy & Design</li>
+          <li>UI Strategy & Design </li>
+          <li>User Personas</li>
+          <li>User Journeys</li>
+          <li>Interactive Design</li>
+          <li>Wireframing & Prototyping</li>
+        </ul>
+</div>
+    <div class="binaryvision-uiux-pic-box" id="binaryvision-uiux-pic-box">
+      <div class="binaryvision-uiux-pic-box-pic1" id="binaryvision-uiux-pic-box-pic1">
+        <img src="assets/Services/Group 10@2x.png" alt="">
+      </div>
+      <div class="binaryvision-uiux-pic-box-pic2" id="binaryvision-uiux-pic-box-pic2">
+          <img src="assets/Services/Group 11@2x.png" alt="">
+        </div>
+        <div class="binaryvision-uiux-pic-box-pic3" id="binaryvision-uiux-pic-box-pic3">
+            <img src="assets/Services/Group 12.png" alt="">
+          </div>
+    </div> 
+</div>
+<div id="binaryvision-digital" class="case-studie binaryvision-digital">
+    <h2 class="digital-brand" id="digital-brand">
+        &#8212; BINARY VISION DIGITAL&trade;
+    </h2>
+    <span class="digital-brand-span" id="digital-brand-span">
+          Igniting opportunity.
+    </span>
+    <div class="backgroud3" id="backgroud3">
+      <p class="digital-brand-content" id="digital-brand-content">
+          We specialize in transforming your ideas 
+          into powerful experiences. We do it all 
+          From big ideas, to brand campaigns, to 
+          everything in between. Through the 
+          seamless combination of design and 
+          development we create innovative digital 
+          content, marketing collateral, and strategies 
+          like no other. We create campaigns based 
+          on strong strategic insights that help you 
+          reach the right audience and eye-catching 
+          marketing content with a specialization in 
+          digital design.
+      </p>
+    </div>
+    <div class="digital-services" id="digital-services">
+        <h4>
+            Services
+          </h4>
+          <ul style="list-style-type:none">
+            <li>Content Development</li>
+            <li>Digital Campaign Design</li>
+            <li>Social Media Content Creation</li>
+            <li>Marketing Strategy</li>
+            <li>Digital Content Strategy</li>
+            <li>Digital Media strategy</li>
+            <li>Digital Marketing Collateral Design</li>
+            </ul>
+    </div>
+    <div class="binaryvision-digital-pic-box" id="binaryvision-digital-pic-box">
+      <div class="pic1" id="binaryvision-digital-pic1">
+        <img src="assets/Services/04-iPhone_X_Mockup@2x.png" alt="">
+      </div>
+      <div class="pic2" id="binaryvision-digital-pic2">
+        <img src="assets/Services/Group 13@2x.png" alt="">
+      </div>
+    </div>
+</div>
+<div id="binaryvision-brand" class="case-studie binaryvision-brand">
+    <h2 class="brand-brand" id="brand-brand">
+        BINARY VISION BRAND&trade; &#8212;
+    </h2>
+    <span class="brand-brand-span" id="brand-brand-span">
+          unforgettable storytelling.
+    </span>
+    <div class="backgroud4" id="backgroud4">
+        <p class="brand-brand-content" id="brand-brand-content">
+            We are story makers. We develop 
+            deliciously inspiring and unforgettable 
+            experiences creating lasting relationships in 
+            the minds of your targets. We give life to 
+            your brand and help you write your story by 
+            stretching the limits of what you think your 
+            brand is capable of. Our forte lies in 
+            developing exquisitely designed 
+            experiences by harnessing the power of 
+            creativity to catch every inch of your target 
+            client's attention. 
+        </p>
+    </div>
+    <div class="brand-services" id="brand-services">
+        <h4>
+            Services
+          </h4>
+          <ul style="list-style-type:none">
+            <li>Brand Campaigns</li>
+            <li>Brand Content Strategy</li>
+            <li>Brand Identity & Guidelines</li>
+            <li>Brand Voice Development</li>
+            <li>Visual & Language Design</li>
+            <li>Brand Collateral Design</li>
+            <li>Brand Packaging Design</li>
+            <li>Copywriting</li>
+          </ul>
+    </div>
+    <div class="binaryvision-brand-pic-box">
+        <div class="box1" id="binaryvision-brand-box1">
+          <img class="p1" src="assets/Services/Group 6@2x.png" alt="">
+          <img class="p2" src="assets/Services/L5@2x.png" alt="">
+          <img class="p3" src="assets/Services/Group 8@2x.png" alt="">
+        </div>
+        <div class="box2" id="binaryvision-brand-box2">
+          <img class="p1" src="assets/Services/Group 5@2x.png" alt="">
+          <img class="p2" src="assets/Services/Group 7@2x.png" alt="">
+        </div>
+      </div>
+</div>
+</section>
+
+<div style="margin-bottom: 100vh"></div>
+<!-- <script>
+    $('.parallax').parallax({imageSrc: 'assets/Services/macbook@2x.png'});
+</script> -->
