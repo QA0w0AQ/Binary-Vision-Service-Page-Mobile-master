@@ -10,8 +10,8 @@ import * as smoothscroll from 'smoothscroll-polyfill';
 })
 export class AppComponent {
   constructor() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      location.href = 'https://qa0w0aq.github.io/Binary-Vision-Service-Page-Mobile-master/';
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      location.href = 'https://qa0w0aq.github.io/Binary-Vision-Service-Page-Desktop-Update/';
     }
     fontawesome.library.add(faFacebook);
     smoothscroll.polyfill();
