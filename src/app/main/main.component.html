@@ -73,7 +73,7 @@
           </li>
           <li>
             <a href="#">
-              <i class="fab fa-youtube"></i>
+              <i class="fab fa-dribbble"></i>
             </a>
           </li>
         </ul>
@@ -87,63 +87,9 @@
 <header id="header">
   <div id="logo-nav-box" class="logo-nav-box">
     <a (click)="routeTo('home')">
-        <img id="logo-image" src="assets/Services/Group 4.png" class="logo" alt="">
+        <img id="logo-image" src="assets/images/group-4.png" srcset="assets/images/group-4@2x.png 2x,assets/images/group-4@3x.png 3x" class="logo" alt="">
     </a>
-    <div id="menu-btn-wrapper" class="menu-btn-wrapper">
-        <img id="menu-btn" src="assets/Services/menu.png" class="menu-btn" alt="" (click)="openMenu()">
-    </div>
-    <div id="menu" class="menu-wrapper">
-        <i class="fas fa-times"(click)="openMenu()"></i>
-
-        <div class="case-studies-content">
-            <span class="menu-title">Case studies</span>
-            <ul>
-                <li>
-                    <a (click)="routeTo('beteaze')">BetEaze</a>
-                </li>
-                <li>
-                    <a (click)="routeTo('arvin')">Arvin</a>
-                </li>
-                <li>
-                    <a (click)="routeTo('koffee')">lungo Social</a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact-content">
-            <span class="menu-title">Contact</span>
-            <ul>
-                <li>
-                    <a href="mailto:hello@binary.vision">
-                        <i class="fas fa-at"></i>
-                        <span>hello@binary.vision</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:+604-359-7187">
-                        <i class="fas fa-phone"></i>
-                        <span>+604-359-7187</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <ul class="social-list">
-            <li>
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <app-menu style="width:0;height: 0"></app-menu>
 </div>
 <img src="assets/Services/Group 9.svg" alt="" id="main-header" class="main-header">
 <div class="main-title-box">
@@ -151,7 +97,7 @@
     <span id="header-subtitle" class="headersubtitle">our reality.</span>
 </div>
 <div class="scroll-box" (click)="scrollTo('header')">
-    <span>Sneak Peeks</span>
+    <span>What we do</span>
     <img src="assets/Services/arrow@2x.png" alt="">
 </div>
 </header>
@@ -181,7 +127,7 @@
 <div id="binaryvision-development" class="case-studies binaryvision-development">
   <div class="all">
       <h2 class="development-brand" id="development-brand">
-          &#8212; BINARY VISION DEVELOPMENT&trade;
+          &#8212; BINARY VISION DEVELOPMENT<sup>TM</sup>
       </h2>
       <span class="development-brand-span" id="development-brand-span">
         Changing the game.
@@ -224,7 +170,7 @@
 </div>
 <div id="binaryvision-uiux" class="case-studie binaryvision-ui/ux">
   <h2 class="ui-brand" id="ui-brand">
-      BINARY VISION UX/UI&trade; &#8212;
+      BINARY VISION UX/UI<sup>TM</sup> &#8212;
   </h2>
   <span class="ui-brand-span" id="ui-brand-span">
         Thinking made visual.
@@ -272,7 +218,7 @@
 </div>
 <div id="binaryvision-digital" class="case-studie binaryvision-digital">
     <h2 class="digital-brand" id="digital-brand">
-        &#8212; BINARY VISION DIGITAL&trade;
+        &#8212; BINARY VISION DIGITAL<sup>TM</sup>
     </h2>
     <span class="digital-brand-span" id="digital-brand-span">
           Igniting opportunity.
@@ -318,7 +264,7 @@
 </div>
 <div id="binaryvision-brand" class="case-studie binaryvision-brand">
     <h2 class="brand-brand" id="brand-brand">
-        BINARY VISION BRAND&trade; &#8212;
+        BINARY VISION BRAND<sup>TM</sup> &#8212;
     </h2>
     <span class="brand-brand-span" id="brand-brand-span">
           unforgettable storytelling.

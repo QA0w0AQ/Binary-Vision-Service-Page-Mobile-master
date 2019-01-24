@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BeteazeComponent } from './beteaze/beteaze.component';
 import { MainComponent } from './main/main.component';
 import { KoffeeRunComponent } from './koffee-run/koffee-run.component';
+import { MenuComponent } from './menu/menu.component';
+import { HtmlPipe } from './menu/innerhtmlpipe.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { KoffeeRunComponent } from './koffee-run/koffee-run.component';
     ArvinComponent,
     BeteazeComponent,
     MainComponent,
-    KoffeeRunComponent
+    KoffeeRunComponent,
+    MenuComponent,
+    HtmlPipe
   ],
   imports: [
     AppRoutingModule,

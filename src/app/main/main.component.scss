@@ -1,7 +1,9 @@
 :focus {
   outline: none;
 }
-
+sup {
+  font-size:medium; 
+}
 
 .title {
   font-size: 4.8vw;
@@ -10,7 +12,7 @@
   margin-bottom: 0;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-weight: lighter;
   text-align: right;
 }
@@ -21,21 +23,21 @@
   color: #F7F6F3;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Monteserrat', sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   float: right;
 }
 .headertitle {
+  font-weight: 200;
   font-size: 8.6vw;
   line-height: 9.6vw;
   color: rgb(255, 217, 62);
   margin-bottom: 0;
-  padding-right: 19vw;
-  padding-top: 58vw;
+  padding-right: 23vw;
+  padding-top: 74vw;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
-  font-weight: lighter;
+  font-family: 'Poppins';
   text-align: right;
 }
 .headersubtitle {
@@ -45,8 +47,8 @@
   display: none;
   padding-right: 5vw;
   animation-duration: 0.6s;
-  font-family: 'Monteserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Montserrat';
+  font-weight: bold;
   float: right;
 }
 
@@ -57,17 +59,18 @@
   margin-bottom: 0;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
-  font-weight: lighter;
+  font-family: 'Poppins';
+  font-weight: 200;
 }
 
 .footersubtitle {
+  font-weight: 200;
   font-size: 9.6vw;
   line-height: 11.6vw;
   color: #F7F6F3;
   display: none;
   animation-duration: 0.6s;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
 }
 .scroll-box {
   position: absolute;
@@ -94,8 +97,8 @@
     }
   }
   span {
-    font-family: "Poppins", sans-serif;
-    font-size: 3.6vw;
+    font-family: "Poppins";
+    font-size: 18px;
     line-height: 1.8vw;
     color: #F7F6F3;
   }
@@ -106,8 +109,8 @@
 }
 /* FOOTER */
 .footer {
-  margin-top: 26vw;
-  display: flex;
+  display: none;
+  margin-top: 23vw;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
@@ -129,7 +132,7 @@
       }
       span {
         display: block;
-        font-weight: 100;
+        font-weight: 200;
       }
       h2 {
         display: block;
@@ -168,7 +171,7 @@
         }
         span {
           font-size: 4.5vw;
-          font-weight: 300;
+          font-weight: 200;
           letter-spacing: 0.05vw;
           color: #F7F6F3;
         }
@@ -176,7 +179,7 @@
         input {
           font-size: 6vw;
           line-height: 6.6vw;
-          font-weight: 300;
+          font-weight: 200;
           letter-spacing: 0.1vw;
           color: #fff;
           opacity: .9;
@@ -187,7 +190,7 @@
           &::placeholder {
             color: #fff;
             opacity: .9;
-            font-weight: 300;
+            font-weight: 200;
             letter-spacing: 0.1vw;
           }
         }
@@ -209,7 +212,7 @@
           span {
             font-size: 4.5vw;
             line-height: 5.3vw;
-            font-weight: 500;
+            font-weight: 200;
             color: #fff;
           }
           img {
@@ -259,7 +262,7 @@
             }
             span {
               font-size: 4.5vw;
-              font-weight: 300;
+              font-weight: 200;
               color: #fff;
               margin-left: 3vw;
             }
@@ -298,7 +301,7 @@
     margin-bottom: 12vw;
     span {
       font-size: 4.5vw;
-      font-weight: 300;
+      font-weight: 200;
       color: #fff;
     }
   }
@@ -307,35 +310,21 @@
 /* HEADER */
 header {
   position: relative;
-  height: 74vh;
+  height: 84vh;
   background-color: #0E1529;
   padding: 10% 8% 0 8%;
-  .logo-nav-box {
+  .logo-nav-box.animated.fadeInDown {
     display: none;
     justify-content: space-between;
-    // position: fixed;
-    // top: 4vw;
-    // left: 11%;
-    // right: 11%;
+    position: fixed;
+    left: 11%;
+    right: 11%;
     transition: top 0.2s ease-in-out;
-    z-index: 2;
+    z-index: 3;
     a {
       cursor: pointer;
       .logo {
         width: 16vw;
-      }
-    }
-    .menu-btn-wrapper {
-      position: absolute;
-      right: 0;
-      top: -4vw;
-      padding: 4.9% 2.2% 1.7% 2.2%;
-      background-color: #0E1529;
-      box-shadow: 0 40px 100px 0 rgba(0, 0, 0, 0.2);
-      .menu-btn {
-        height: 6.6vw;
-        width: 12.8vw;
-        cursor: pointer;
       }
     }
   }
@@ -500,13 +489,13 @@ header {
 
 .binaryvision {
   text-align: justify;
-  font-size: 5.5vw;
-  margin-top: 29vw;
-  padding-left: 8vw;
+  font-size: 20px;
+  margin-top: 24vw;
+  padding-left: 14vw;
   display: none;
   color: #0E1529;
-  animation-duration: 1.6s;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  animation-duration: 0.6s;
+  font-family: 'Poppins';
 }
 
 .content {
@@ -514,12 +503,12 @@ header {
   width: 66vw;
   line-height: 6vw;
   margin-top: -2vw;
-  font-size: 4.2vw;
+  font-size: 16px;
   color: #0E1529;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins';
   display: none;
   animation-duration: 0.6s;
-  padding-left: 18vw;
+  padding-left: 19vw;
   letter-spacing: 0.1vw;
 }
 .case-studies-section {
@@ -534,11 +523,11 @@ header {
   }
 
   .development-brand {
-      font-size: 8.2vw;
+      font-size: 32px;
       left: -55vw;
       position: absolute;
       transform: rotate(-90deg);
-      font-family: sans-serif;
+      font-family: 'Montserrat';
       z-index: 1;
       color: #0E1529;
       animation-name: developmentBrand;
@@ -550,13 +539,13 @@ header {
         to {top: -21vw;opacity: 1;}
       }
       .development-brand-span{
-          font-size: 5.5vw;
+          font-size:20px;
           left: 1vw;
           color: #0E1529;
           // top: 3vw;
           position: absolute;
           transform: rotate(-90deg);
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Poppins';
           z-index: 1;
           display: none;
           animation-duration: 1s;
@@ -576,17 +565,18 @@ header {
           margin-top: 223vw;
           margin-left: 0vw;
           .development-brand-content {
-            font-size: 4.2vw;
+            font-weight: 300;
+            font-size: 16px;
             line-height: 5.2vw;
             margin-left: 12vw;
-            padding-top: 89vw;
+            padding-top: 82vw;
             letter-spacing: 0.05em;
               text-align: justify;
               margin-right: 13vw;
               display: none;
-              animation-delay: 1.5s;
-              animation-duration: 1s;
-              font-family: 'Poppins', sans-serif;
+              animation-delay:1s;
+              animation-duration: 0.6s;
+              font-family: 'Poppins';
           }
       }
       
@@ -606,23 +596,26 @@ header {
       }
            
       .development-services {
-          font-size: 4vw;
+          font-size: 20px;
+          font-weight: bold;
           line-height: 6vw;
           position: absolute;
           top:175.5vw;
           left: 11vw;
           color: #0E1529;
           display: none;
-          animation-delay: 1.5s;
-          animation-duration: 1s;
+          animation-delay:1s;
+          animation-duration: 0.6s;
           h4{
               margin-bottom: 0;
-              font-family: 'Monteserrat', sans-serif;
+              font-family: 'Montserrat';
           }
           ul{
+              font-size: 16px;
+              font-weight: 300;
               padding-left: 0;
               margin-top: 0;
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Poppins';
           }
       }
 
@@ -634,28 +627,29 @@ header {
           margin-top: 104vw;
           margin-left: auto;
           .ui-brand-content {
+            font-weight: 300;
               color: #0E1529;
               display: none;
-              font-size: 4.2vw;
+              font-size: 16px;
               line-height: 5.2vw;
               margin-left: 12vw;
               padding-top: 83vw;
               margin-right: 13vw;
               text-align: justify;
-              font-family: 'Poppins', sans-serif;
-              animation-delay: 1.5s;
-              animation-duration: 1s;
+              font-family: 'Poppins';
+              animation-delay:1s;
+              animation-duration: 0.6s;
           }
 
       }
       .ui-brand {
           color: #0E1529;
-          font-size: 8.2vw;
+          font-size: 32px;
           top: 75vw;
           right: -36vw;
           position: absolute;
           transform: rotate(90deg);
-          font-family: sans-serif; 
+          font-family: 'Montserrat'; 
           z-index: 1;
           animation-name: uiBrand;
           display: none;
@@ -667,12 +661,12 @@ header {
       }
       .ui-brand-span{
           color: #0E1529;
-          font-size: 5.5vw;
-          right: -3.5vw;
+          font-size:20px;
+          right: -1vw;
           top: 81vw;
           position: absolute;
           transform: rotate(90deg);
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Poppins';
           z-index: 1;
           animation-name: uiBrandSpan;
           display: none;
@@ -680,28 +674,31 @@ header {
       }
       @keyframes uiBrandSpan {
         from { top: 310vw;opacity: 0;} 
-        to {top: 318vw;opacity: 1;}
+        to {top: 316vw;opacity: 1;}
       }
 
       .ui-services {
           color: #0E1529;
-          font-size: 4vw;
+          font-size: 20px;
+          font-weight: bold;
           line-height: 6vw;
           position: absolute;
           top: 462vw;
           left: 41vw;
           display: none;
-          animation-delay: 1.5s;
-          animation-duration: 1s;
+          animation-delay:1s;
+          animation-duration: 0.6s;
           h4{
               margin-bottom: 0;
-              font-family: 'Monteserrat', sans-serif;
+              font-family: 'Montserrat';
               text-align: end;
           }
           ul{
+            font-size: 16px;
+            font-weight: 300;
               padding-left: 0;
               margin-top: 0;
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Poppins';
               text-align: end;
           }
       }
@@ -796,28 +793,29 @@ header {
           margin-left: 0vw;
           opacity: 0;
           .digital-brand-content {
+            font-weight: 300;
               display: none;
-              font-size: 4.2vw;
+              font-size: 16px;
               line-height: 5.2vw;
               margin-left: 12vw;
               padding-top: 88vw;
               margin-right: 13vw;
               color: #0E1529;
               text-align: justify;
-              animation-delay: 1.5s;
-              animation-duration: 1s;
-              font-family: 'Poppins', sans-serif;
+              animation-delay:1s;
+              animation-duration: 0.6s;
+              font-family: 'Poppins';
           }
       }
       
       .digital-brand {
-          font-size: 8.2vw;
+          font-size: 32px;
           left: -42vw;
           top: 151vw;
           color: #0E1529;
           position: absolute;
           transform: rotate(-90deg);
-          font-family: sans-serif; 
+          font-family: 'Montserrat'; 
           z-index: 1;
           animation-name: digitalBrand;
           display: none;
@@ -828,13 +826,13 @@ header {
         to {top: 604vw;opacity: 1;}
       }
       .digital-brand-span{
-          font-size: 5.5vw;
+          font-size:20px;
           left: 1vw;
           top: 159vw;
           color: #0E1529;
           position: absolute;
           transform: rotate(-90deg);
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Poppins';
           z-index: 1;
           animation-name: digitalBrandSpan;
           display: none;
@@ -845,23 +843,26 @@ header {
         to {top: 634vw;opacity: 1;}
       }
       .digital-services {
-          font-size: 4vw;
+          font-size: 20px;
+          font-weight: bold;
           line-height: 6vw;
           position: absolute;
           top: 774vw;
           color: #0E1529;
           left: 11vw;
           display: none;
-          animation-delay: 1.5s;
-          animation-duration: 1s;
+          animation-delay:1s;
+          animation-duration: 0.6s;
           h4{
               margin-bottom: 0;
-              font-family: 'Monteserrat', sans-serif;
+              font-family: 'Montserrat';
           }
           ul{
+            font-size: 16px;
+            font-weight: 300;
               padding-left: 0;
               margin-top: 0;
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Poppins';
           }            
       }
 
@@ -959,29 +960,30 @@ header {
           margin-top: 100vw;
           margin-left: auto;
           .brand-brand-content {
+            font-weight: 300;
               display: none;
-              font-size: 4.2vw;
+              font-size: 16px;
               line-height: 5.2vw;
               margin-left: 12vw;
               padding-top: 73vw;
               margin-right: 13vw;
               color: #0E1529;
               text-align: justify;
-              font-family: 'Poppins', sans-serif;
-              animation-delay: 1.5s;
-              animation-duration: 1s;
+              font-family: 'Poppins';
+              animation-delay:1s;
+              animation-duration: 0.6s;
           }
       }
 
       .brand-brand {
           z-index: 1;
-          font-size: 8.2vw;
+          font-size: 32px;
           right: -36vw;
           top: 908vw;
           color: #0E1529;
           position: absolute;
           transform: rotate(90deg);
-          font-family: sans-serif;
+          font-family: 'Montserrat';
           animation-name: brandBrand;
           display: none;
           animation-duration: 1s;
@@ -991,13 +993,13 @@ header {
         to {top: 898vw;opacity: 1;}
       }
       .brand-brand-span {
-          font-size: 5.5vw;
+          font-size:20px;
           right: -3.5vw;
-          top: 925vw;
+          top: 920vw;
           color: #0E1529;
           position: absolute;
           transform: rotate(90deg);
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Poppins';
           z-index: 1;
           animation-name: brandBrandSpan;
           display: none;
@@ -1005,27 +1007,30 @@ header {
       }
         @keyframes brandBrandSpan {
         from { top: 935vw;opacity: 0;} 
-        to {top: 925vw;opacity: 1;}
+        to {top: 920vw;opacity: 1;}
       }
       .brand-services {
-          font-size: 4vw;
+          font-size: 20px;
+          font-weight: bold;
           line-height: 6vw;
           position: absolute;
           top: 1057vw;
           left: 39vw;
           color: #0E1529;
           display: none;
-          animation-delay: 1.5s;
-          animation-duration: 1s;
+          animation-delay:1s;
+          animation-duration: 0.6s;
           h4{
               margin-bottom: 0;
-              font-family: 'Monteserrat', sans-serif;
+              font-family: 'Montserrat';
               text-align: end;
           }
           ul{
+            font-size: 16px;
+            font-weight: 300;
               padding-left: 0;
               margin-top: 0;
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Poppins';
               text-align: end;
           }
       }
