@@ -110,7 +110,7 @@ sup {
 /* FOOTER */
 .footer {
   display: none;
-  margin-top: 23vw;
+  margin-top: 26vw;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
@@ -316,12 +316,13 @@ header {
   padding: 10% 8% 0 8%;
   .logo-nav-box.animated.fadeInDown {
     display: none;
+    width: 320.75px;
     justify-content: space-between;
     position: fixed;
     left: 11%;
     right: 11%;
     transition: top 0.2s ease-in-out;
-    z-index: 3;
+    z-index: 5;
     a {
       cursor: pointer;
       .logo {
@@ -621,7 +622,7 @@ header {
       }
 
       .background2 {
-          opacity: 1;
+          opacity: 0;
           background: #FF8B45;
           height: 199vw;
           width: 100vw;

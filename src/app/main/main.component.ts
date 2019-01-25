@@ -279,7 +279,7 @@ moveBackground();
     }
     const binaryvisionUi = document.getElementById('background2').offsetTop + window.innerHeight*1.69
 
-    if(top>=2189){
+    if(top>=2100){
     document.getElementById('binaryvision-uiux-pic-box').style.display="block";
     document.getElementById('binaryvision-uiux-pic-box').className='binaryvision-uiux-pic-box animated fadeInLeft'; 
     document.getElementById('background2').style.opacity="1";
@@ -297,7 +297,7 @@ moveBackground();
     const binaryvisionDigita = document.getElementById('case-studies-section').offsetTop + innerHeight*3 - (window.innerHeight * 14 / 100) -
     (window.innerHeight * 12 / 100) * 2;
 
-    if(top>=3393.25){
+    if(top>=3100.25){
         // document.getElementById('binaryvision-digital-pic1').style.display="block";
         // document.getElementById('binaryvision-digital-pic1').className='pic1 animated fadeInRight'; 
         // document.getElementById('binaryvision-digital-pic2').style.display="block";
@@ -359,7 +359,7 @@ moveBackground();
     const binaryvisionBrand = document.getElementById('case-studies-section').offsetTop + innerHeight*4.8 - (window.innerHeight * 14 / 100) -
     (window.innerHeight * 12 / 100) * 2;
     
-    if(top>=4531){
+    if(top>=4231){
         document.getElementById('binaryvision-brand-box1').style.display="block";
         document.getElementById('binaryvision-brand-box1').className='box1 animated fadeInLeft'; 
         document.getElementById('binaryvision-brand-box2').style.display="block";
