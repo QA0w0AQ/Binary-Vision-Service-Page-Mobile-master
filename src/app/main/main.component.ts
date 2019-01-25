@@ -192,37 +192,37 @@ var wt = window.addEventListener
     }
   }
 
-  var lFollowX = 0,
-    lFollowY = 0,
-    x = 0,
-    y = 0,
-    friction = 1 / 20;
+//   var lFollowX = 0,
+//     lFollowY = 0,
+//     x = 0,
+//     y = 0,
+//     friction = 1 / 20;
 
-function moveBackground() {
-  x += (lFollowX - x) * friction;
-  y += (lFollowY - y) * friction;
+// function moveBackground() {
+//   x += (lFollowX - x) * friction;
+//   y += (lFollowY - y) * friction;
 
-  var translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+//   var translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
 
-  $('.binaryvision-development-pic').css({
-    '-webit-transform': translate,
-    '-moz-transform': translate,
-    'transform': translate
-  });
+//   $('.binaryvision-development-pic').css({
+//     '-webit-transform': translate,
+//     '-moz-transform': translate,
+//     'transform': translate
+//   });
 
-  window.requestAnimationFrame(moveBackground);
-}
+//   window.requestAnimationFrame(moveBackground);
+// }
 
-$(window).on('mousemove click', function(e) {
+// $(window).on('mousemove click', function(e) {
 
-  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-  lFollowX = (50 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-  lFollowY = (15 * lMouseY) / 100;
+//   var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+//   var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+//   lFollowX = (15 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+//   lFollowY = (15 * lMouseY) / 100;
 
-});
+// });
 
-moveBackground();
+// moveBackground();
 
 
   window.addEventListener('scroll',()=>{
@@ -315,46 +315,7 @@ moveBackground();
         document.getElementById('digital-brand-span').style.display="block";
         document.getElementById('digital-brand-span').className='digital-brand-span animated digitalBrandSpan';
         }
-    // if(top>=3500.25){
-    //         document.getElementById('binaryvision-digital-pic1').className='pic1';
-    //     }
-    // if(top>=3585.25){
 
-        // var $ = window.addEventListener();
-        // $(window).bind('mousewheel', function(event) {
-        //     if (event.originalEvent.wheelDelta  >= 0 ) {
-        //         // ('Scroll up');
-        //         document.getElementById('binaryvision-digital-pic1').className='pic1CC animated fadeDown11';
-        //         document.getElementById('binaryvision-digital-pic2').className='pic2CC animated fadeDown22';
-        //     }
-        //     else {
-        //         // 'Scroll down');
-        //         document.getElementById('binaryvision-digital-pic1').className='pic1C animated fadeDown1';
-        //         document.getElementById('binaryvision-digital-pic2').className='pic2C animated fadeDown2';
-                
-        //     }
-        // });
-
-
-        // document.getElementById('binaryvision-digital-pic1').className='pic1C animated fadeDown1';
-        // document.getElementById('binaryvision-digital-pic2').className='pic2C animated fadeDown2';
-    // }
-    // this.phoneHeight = document.getElementById('binaryvision-digital-pic-box').offsetHeight;
-    // if (top>=3585.25) {
-    //     if( top > this.lastScrollTop && top > this.phoneHeight){
-    //         document.getElementById('binaryvision-digital-pic1').className='pic1C animated fadeDown1';
-    //         document.getElementById('binaryvision-digital-pic2').className='pic2C animated fadeDown2';
-    //     }
-    //     else{
-    //         document.getElementById('binaryvision-digital-pic1').className='pic1';
-    //         document.getElementById('binaryvision-digital-pic2').className='pic2';
-    //     }
-    // } 
-    // else {
-    //     if (top < this.lastScrollTop || top < this.navbarHeight) {
-            
-    //     }
-    // }
 
     const binaryvisionBrand = document.getElementById('case-studies-section').offsetTop + innerHeight*4.8 - (window.innerHeight * 14 / 100) -
     (window.innerHeight * 12 / 100) * 2;
