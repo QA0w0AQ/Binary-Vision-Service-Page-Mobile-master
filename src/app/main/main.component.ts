@@ -138,26 +138,6 @@ sendForm() {
 }
 
   ngOnInit() {
-    // window.addEventListener("DOMContentLoaded",scrollLoop, false);
-
-    // var pic1 = document.querySelector("#binaryvision-development-pic1");
-    // // var pic2 = document.querySelector("#binaryvision-digital-pic2");
-    
-    // var xScrollPosition;
-    // var yScrollPosition;
-    
-    // function scrollLoop(e){
-    //     xScrollPosition = window.scrollX;
-    //     yScrollPosition = window.scrollY;
-    
-    //     setTranslate(0,yScrollPosition *0.01, pic1);
-    
-    //     requestAnimationFrame(scrollLoop);
-    // }
-    
-    // function setTranslate(xPos,yPos, el) {
-    //     el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0";
-    // }
 
     this.navbarHeight = document.getElementById('logo-nav-box').offsetHeight;
     setTimeout(() => {

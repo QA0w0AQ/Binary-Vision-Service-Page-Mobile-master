@@ -20,17 +20,36 @@
 	-moz-osx-font-smoothing: grayscale;
 } */
 
+#arrow {
+    display: none;
+    position: fixed;
+    top: 3vw;
+    left: 1%;
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(135deg);
+    transition: border-width 150ms ease-in-out;
+    z-index: 9999;
+  }
+  
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+
 .logo {
 	display: none;
 }
 /* case-content */
 .case-content {
-	width: 78vw;
-    height: 24vw;
     left: auto;
 	position: absolute;
     transition-duration: 1s;
-    top: 30vw;
+    top: 23vw;
 }
 
 .projectbox.animated.showup {
@@ -404,9 +423,9 @@ a.demo--current {
 
 .global-menu {
     top: -10vw;
-    left: 4vw;
-    width: 348px;
-    height: 686px;
+    left: -12vw;
+	width: 100vw;
+	height: 90vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -579,12 +598,12 @@ a.demo--current {
 
 
 .shape-overlays {
-    width: 348px;
-    height: 686px;
+	width: 120vw;
+	height: 120vh;
 	pointer-events: none;
 	position: fixed;
 	top: -10vw;
-    left: 4vw;
+    left: -12vw;
 }
 
 .shape-overlays.is-opened {
@@ -977,54 +996,3 @@ a.demo--current {
 	}
 }
 
-  @media screen and (max-width: 450px) {
-	.global-menu__wrap {
-
-	}
-
-	.global-menu__wrap .global-menu__item.global-menu__item--navigation.is-opened {
-
-	}
-	.global-menu__wrap .global-menu__item.global-menu__item--navigation {
-		display: grid;
-		margin: 6.5vw;
-		font-size: 2em;
-	}
-
-	// .contacts-social-lists {
-	// 	display: none;
-	// }
-	// .logo {
-	// 	opacity: 1;
-	// 	display: flex;
-	// 	top: 11vw;
-	// 	position: absolute;
-	// 	transition-duration: 1s;
-	// }
-	// .logo img {
-	// 	height: 8vw;
-	// 	margin-left: 44vw;
-	// }
-
-	.newbox {
-		display: flex;
-		flex-direction: column;
-		color: white;
-		font-size: 8vw;
-		line-height: 7vw;
-	}
-	.case-content{
-
-
-	}
-	.box1, .box2, .box3 {
-		font-size: 5vw;
-		line-height: 12vw;
-	}
-	sup {
-		vertical-align: super;
-		font-weight: bold;
-		margin-left: 0.4vw;
-		font-size: 2.5vw;
-	} 
-  }

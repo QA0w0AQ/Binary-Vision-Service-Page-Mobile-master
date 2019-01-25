@@ -75,9 +75,10 @@ export class MenuComponent implements OnInit {
     shapeOverlays:any;
     x:any;
     c:any;
+    arrow:any;
     projectSupStyle:any="vertical-align:super;font-weight:bold;font-size:10px;margin-left:0.4vw";
-    projectBoxsStyle:any="line-height: 15vw;font-size: 20px;font-family: 'Montserrat';color: white;font-weight: bold;"
-    projectBoxStyle:any="animation-name:showup;transition-duration: 0.6s;display: flex;flex-direction: column;color: white;font-size: 20px;margin-left:38px;"
+    projectBoxsStyle:any="line-height: 12vw;font-size: 20px;font-family: 'Montserrat';color: white;font-weight: bold;"
+    projectBoxStyle:any="overflow: auto;animation-name:showup;transition-duration: 0.6s;display: flex;flex-direction: column;color: white;font-size: 20px;margin-left:38px;"
     public view = ``;
     projectView = `<div class="projectbox animated showup" style="${this.projectBoxStyle}">
     <div class="box1" style="${this.projectBoxsStyle}">
@@ -103,12 +104,15 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
-
+  BackArrow(){
+    this.menu__item.setAttribute("style", "display:block;");
+    this.content.setAttribute("style", "display:none;")
+  }
 
   showProject(){
-    this.menu__item.setAttribute("style", "opacity:0;");
-    this.shapeOverlays.style.height = "945px";
+    this.menu__item.setAttribute("style", "display:none;");
     this.content.innerHTML = this.projectView;
+    this.arrow.style.display = "block"
     // this.content.className = 'case-content animated showup';
   }
   showCapabilities(){
@@ -139,20 +143,20 @@ export class MenuComponent implements OnInit {
       }
       this.elmHamburger.setAttribute("style", "position:fixed")
       this.content.setAttribute("style", "opacity:1;");
-      this.logo.setAttribute("style", "opacity:1;");
       this.menu__item.setAttribute("style", "opacity:1");
     } else {
       this.elmHamburger.classList.remove('is-opened-navi');
       for (var i = 0; i < this.gNavItems.length; i++) {
         this.gNavItems[i].classList.remove('is-opened');
         this.content.innerHTML='';
-        this.shapeOverlays.style.height="686px";
-        this.menu__item.style.opacity="1";
+        this.menu__item.style.display="block";
+        this.arrow.style.display="none";
       }
       // this.logo.setAttribute("style", "opacity:0;");
 
     }
   }
+
 
 
   ngOnInit() {
@@ -173,7 +177,7 @@ export class MenuComponent implements OnInit {
     this.content = document.getElementById('case-content');
     this.menu__item = document.getElementById('global-menu__wrap');
     this.shapeOverlays = document.getElementById('shape-overlays');
-    
+    this.arrow = document.getElementById('arrow');
   }
 
 

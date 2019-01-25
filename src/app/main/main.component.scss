@@ -633,7 +633,7 @@ header {
               font-size: 16px;
               line-height: 5.2vw;
               margin-left: 12vw;
-              padding-top: 83vw;
+              padding-top: 81vw;
               margin-right: 13vw;
               text-align: justify;
               font-family: 'Poppins';
@@ -764,25 +764,25 @@ header {
         }
           .binaryvision-uiux-pic-box-pic3{
               position: relative;
-              top: -177vw;
+              top: -173vw;
               left: -6vw;
               animation-name: uipic3FadeUp;
               animation-duration: 1s;
           }
           @keyframes uipic3FadeUp {
-            from { top: -170vw;} 
-            to {top: -177vw;}
+            from { top: -166vw;} 
+            to {top: -173vw;}
           }
           .binaryvision-uiux-pic-box-pic33{
             position: relative;
-            top: -170vw;
+            top: -166vw;
             left: -6vw;
             animation-name: uipic3FadeDown;
             animation-duration: 1s;
         }
         @keyframes uipic3FadeDown {
-          from { top: -177vw;} 
-          to {top: -170vw;}
+          from { top: -173vw;} 
+          to {top: -166vw;}
         }
       }
       .backgroud3 {
@@ -798,7 +798,7 @@ header {
               font-size: 16px;
               line-height: 5.2vw;
               margin-left: 12vw;
-              padding-top: 88vw;
+              padding-top: 81vw;
               margin-right: 13vw;
               color: #0E1529;
               text-align: justify;
@@ -1074,3 +1074,45 @@ header {
       }
 }
 
+/* MEDIA QUERIES */
+@media screen and (width: 360px) and (height: 567px) {
+
+}
+
+@media screen and (width: 412px) and (height: 660px) {
+
+}
+@media screen and (max-width: 400px) {
+  .case-studies-section{
+      .development-brand{
+          left: -70vw;
+      }
+      .development-brand-span{
+        left: -6vw;
+      }
+      .ui-brand{
+        right: -48vw;
+      }
+      .ui-brand-span{
+        right: -8vw;
+      }
+      .digital-brand{
+        left: -52vw;
+      }
+      .digital-brand-span{
+        left: -8vw;
+      }
+      .brand-brand{
+        right: -52vw;
+      }
+      .brand-brand-span{
+        right: -14.5vw;
+      }
+      .ui-services{
+        left: 27vw;
+      }
+      .brand-services{
+        left: 27vw;
+      }
+}
+}
